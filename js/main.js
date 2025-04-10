@@ -142,23 +142,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // 📌 Transition to Sticky Mode
+        // Transition to Sticky Mode
         if (currentScrollY >= headerDefaultMargin) {
             if (!stickyHeader.classList.contains("sticky")) {
-                // console.log("📌 [STICKY] Header reached top, activating sticky mode.");
+                // console.log(" [STICKY] Header reached top, activating sticky mode.");
                 stickyHeader.classList.add("sticky");
                 stickyHeader.style.marginTop = "0px";
                 document.body.classList.add("sticky-header-active");
-                applyPaddingCompensation(); // 🛠️ Update padding
+                applyPaddingCompensation(); // Update padding
             }
         } else {
 
 
-            // 🔄 Reset to Natural Position
+            // Reset to Natural Position
             if (
                 stickyHeader.classList.contains("sticky") && lastScrollY - currentScrollY > showThreshold
             ) {
-                // console.log("🔄 [RESET] Page at top, returning to natural position.");
+                // console.log("[RESET] Page at top, returning to natural position.");
                 stickyHeader.classList.remove("sticky", "hidden");
 
                 // Reset to original margin instead of hardcoded 1.5rem
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // stickyHeader.style.marginTop = "1.5rem";
 
                 document.body.classList.remove("sticky-header-active");
-                applyPaddingCompensation(); // 🛠️ Reset padding
+                applyPaddingCompensation(); // Reset padding
             }
         }
 
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         applyPaddingCompensation();
     }
 
-    // 🌍 Event Listeners for handing flow of scrolling up and down the page
+    // Event Listeners for handing flow of scrolling up and down the page
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", () => {
         updateHeaderHeight();
@@ -213,7 +213,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // === Restore Scroll Position ===
     const savedScroll = sessionStorage.getItem("scrollPosition");
     if (savedScroll) {
+        // Ensure progress bar doesn't show full immediately after restoring scroll
         window.scrollTo({ top: Number(savedScroll), behavior: "instant" });
+
+        // Delay progress bar update until after scroll is settled
+        setTimeout(() => {
+            progressBar.style.opacity = "1";
+            updateProgressBar();
+        }, 100); // Slight delay to let the scroll settle
     }
 
     // === Delay initial update to avoid flicker ===
