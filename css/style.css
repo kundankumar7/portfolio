@@ -1,0 +1,1392 @@
+/* === Define @font-face rules === */
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope/Manrope-VariableFont_wght.woff2') format('woff2'),
+         url('../fonts/Manrope/Manrope-VariableFont_wght.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff2') format('woff2'),
+         url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('woff2'),
+         url('../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.woff') format('woff');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.woff2') format('woff2'),
+         url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Medium.woff2') format('woff2'),
+         url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.woff2') format('woff2'),
+         url('../fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2'),
+         url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* ========== Light Theme & Font (Elegant & Modern) ========== */
+:root {
+    
+ /* Theme Icon Color */
+ --sun-light-default: #E6B800;
+ --sun-light-default-hover: #FFD700; /* Gold: A rich golden hue, slightly warm */
+
+
+ /* Centralized font family variable */
+
+    /* Font Families */
+    --font-primary: 'Manrope', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --font-monospace: 'Courier New', monospace;
+
+    /* Special Usage Fonts */
+    
+    --font-greeting: 'Poppins', sans-serif; /* Friendly and modern */
+    --font-puzzle: 'Poppins', sans-serif;
+    --font-puzzle-alt1: 'Montserrat', sans-serif; /* Clean and structured */
+    --font-quotes: 'Cormorant Garamond', serif;
+    --font-quote-alt1: 'Cormorant Garamond', serif; /* Elegant and expressive */
+
+
+
+    /* ========== Font Weight Start ========== */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --fw-desktop-h1: var(--fw-medium);
+    --fw-laptop-h1: var(--fw-medium);
+    --fw-tablet-h1: var(--fw-medium);
+    --fw-mobile-lg-h1: var(--fw-medium);
+    --fw-mobile-sm-h1: var(--fw-medium);
+
+    --fw-desktop-h2: var(--fw-medium);
+    --fw-laptop-h2: var(--fw-medium);
+    --fw-tablet-h2: var(--fw-medium);
+    --fw-mobile-lg-h2: var(--fw-medium);
+    --fw-mobile-sm-h2: var(--fw-medium);
+
+    --fw-desktop-h3: var(--fw-medium);
+    --fw-laptop-h3: var(--fw-medium);
+    --fw-tablet-h3: var(--fw-medium);
+    --fw-mobile-lg-h3: var(--fw-medium);
+    --fw-mobile-sm-h3: var(--fw-medium);
+
+    --fw-desktop-h4: var(--fw-regular);
+    --fw-laptop-h4: var(--fw-regular);
+    --fw-tablet-h4: var(--fw-regular);
+    --fw-mobile-lg-h4: var(--fw-regular);
+    --fw-mobile-sm-h4: var(--fw-regular);
+
+    /* Navigation Fonts weight */
+    /* font weight of nav across all devices should be 600 except mobile */
+    --fw-nav: var(--fw-semibold); /* 600 */
+    --fw-nav-mob: var(--fw-medium); /* 500 */
+
+    /* Body Weight */
+    /* font weight of body across all devices should be 400 */
+    /* Important/Highlighted Text: 500-600 */
+    --fw-body: var(--fw-regular); /* 400 */
+
+    /* highlighted body text font weight */
+    --fw-body-highlighted: var(--fw-medium); /* 500 */
+
+    /* important body text font weight */
+    --fw-body-important: var(--fw-semibold); /* 600 */
+
+    /* Blockquote (Quote Text) */
+    --fw-quote: 400;
+
+    /* Strong (Bold Text) */
+    --fw-strong: 500;
+
+    /* Highlighted Text */
+    --fw-highlight: 500;
+
+    /* Button Font Weight */
+    --fw-btn-sb: var(--font-weight-semibold); /* 600 */
+    --fw-btn-med: var(--font-weight-medium); /* 500 */
+
+    /* ========== Font Weight End ========== */
+
+    /* ========== Font Sizes Start ========== */
+    --font-size-heading-xl: 48px;
+    --font-size-heading-lg: 36px;
+    --font-size-heading-md: 28px;
+    --font-size-heading-sm: 24px;
+    --font-size-body-lg: 18px;
+    --font-size-body-md: 16px;
+    --font-size-body-sm: 14px;
+    --font-size-caption: 12px;
+
+    /* Navigation Fonts Size */
+    /* letter spacing across all devices should 1px */
+    --fs-nav-desktop: 22px; /* 24px */
+    --fs-nav-laptop: 20px; /* 22px */ 
+    --fs-nav-tablet: 18px; /* 20px */
+    --fs-nav-mobile-lg-: 16px; /* 18px */
+    --fs-nav-mobile-sm: 14px; /* 15px */
+
+    /* Blockquote (Quote Text) */
+    --fs-quote-desktop: 22px;
+    --fs-quote-laptop: 21px;
+    --fs-quote-tablet: 20px;
+    --fs-quote-mobile-lg: 18px;
+    --fs-quote-mobile-sm: 16px;
+
+    /* Body Text Sizes */
+    --fs-desktop-body: 21px;
+    --fs-laptop-body: 20px;
+    --fs-tablet-body: 18px;
+    --fs-mobile-lg-body: 16px;
+    --fs-mobile-sm-body: 15px;
+
+    /* Heading Sizes */
+    --fs-desktop-h1: 34px; /* 44px */
+    --fs-laptop-h1: 32px; /* 38px */
+    --fs-tablet-h1: 30px; /* 32px */
+    --fs-mobile-lg-h1: 26px; /* 28px */
+    --fs-mobile-sm-h1: 22px; /* 24px */
+
+    --fs-desktop-h2: 28px; /* 36px */
+    --fs-laptop-h2: 26px; /* 32px */
+    --fs-tablet-h2: 24px; /* 28px */
+    --fs-mobile-lg-h2: 22px; /* 24px */
+    --fs-mobile-sm-h2: 20px; /* 22px */
+
+    --fs-desktop-h3: 24px; /* 28px */
+    --fs-laptop-h3: 22px; /* 26px */
+    --fs-tablet-h3: 20px; /* 24px */
+    --fs-mobile-lg-h3: 18px; /* 22px */
+    --fs-mobile-sm-h3: 17px; /* 20px */
+
+    --fs-desktop-h4: 22px; /* 22px */
+    --fs-laptop-h4: 20px; /* 20px */
+    --fs-tablet-h4: 18px; /* 18px */
+    --fs-mobile-lg-h4: 16px; /* 16px */
+    --fs-mobile-sm-h4: 15px; /* 15px */
+
+    /* Button Font Size */
+    --fs-btn: 16px;
+
+    /* Code */
+    /* --font-size-code: 0.875rem;  */
+    --fs-code: 0.875rem; /* 14px */
+
+    /* ========== Font Sizes End ========== */
+
+    /* ========== Letter Spacing Start ========== */
+
+    --ls-blog-header-h1: 2px;
+    /* Nav Letter Spacing */
+    --ls-desktop-nav: 1px; /* 1.1px */
+    --ls-laptop-nav: 0.8px;
+    --ls-tablet-nav: 0.6px;
+    --ls-mob-lg: 0.5px;
+    --ls-mob-sm: 0.3px;
+
+    /* Body Letter Spacing */
+    --ls-desktop-body: 0.5px;
+    --ls-laptop-body: 0.45px;
+    --ls-tablet-body: 0.4px;
+    --ls-mobile-lg-body: 0.3px;
+    --ls-mobile-sm-body: 0.2px;
+
+    /* Letter Spacing for Capitalized Text */
+    --ls-desktop-caps: 0.6px;
+    --ls-laptop-caps: 0.55px;
+    --ls-tablet-caps: 0.5px;
+    --ls-mobile-lg-caps: 0.4px;
+    --ls-mobile-sm-caps: 0.3px;
+
+    /* Letter Spacing for Emphasized Text (Italic/Bold) */
+    --ls-desktop-emphasized: 0.55px;
+    --ls-laptop-emphasized: 0.5px;
+    --ls-tablet-emphasized: 0.45px;
+    --ls-mobile-lg-emphasized: 0.35px;
+    --ls-mobile-sm-emphasized: 0.25px;
+
+    /* ========== Letter Spacing End ========== */
+
+    /* ========== Line Height Start ========== */
+    
+    --lh-desktop-body: 1.6; /* 32px | FS: 20px */
+    --lh-laptop-body: 1.55; /* 28px | FS: 18px */
+    --lh-tablet-body: 1.5; /* 24px | FS: 16px */
+    --lh-mobile-lg-body: 1.45; /* 20px | FS: 14px */
+    --lh-mobile-sm-body: 1.4; /* 17px | FS: 12px */
+
+    /* ========== Line Height End ========== */
+
+    /* ========== Padding Start ========== */
+    --pad-nl-top-bottom: 0.5rem; /* 8px */
+    --pad-nl-left-right: 1rem; /* 16px */
+
+    --pad-nl-ms-top-bottom: 0.5rem; /* 8px */
+    --pad-nl-ms-left-right: 0.75rem; /* 12px */
+
+    --pad-nl-ipad-top-bottom: 0.5rem; /* 8px */
+    --pad-nl-ipad-left-right: 0.5rem; /* 8px */
+
+    --pad-nl-mob-lg-top-bottom: 0.125rem; /* 2px */
+    --pad-nl-mob-lg-left-right: 0.125rem; /* 2px */
+
+    --pad-nl-mob-sm-top-bottom: 0.25rem; /* 4px */
+    --pad-nl-mob-sm-left-right: 0.25rem; /* 4px */
+
+    /* ========== Padding End ========== */
+
+
+ /* Centralized color variable */
+
+    /* ===== PRIMARY COLORS ===== */
+    --primary-color: #0056B3; /* Deep Blue - Main Brand Color */
+    --primary-dark: #003580; /* Navy Blue - Darker Shade for Primary Elements */
+    --primary-light: #3399FF; /* Sky Blue - Lighter Shade for Hover Effects */
+    --secondary-color: #50C878; /* Emerald Green - Secondary Accent */
+    --tertiary-color: #D9431E; /* Warmer Orange - Call to Action */
+    --quaternary-color: #8E44AD; /* Purple - Highlights */
+    --accent-color: #E5A300; /* Darker Amber - Emphasis & Important Elements */
+    --neutral-color: #6C757D; /* Gray - Used for Muted Text & Borders */
+
+    /* ===== BACKGROUND COLORS ===== */
+    --bg-main: #f8f9fa; /* Light Gray - Main Page Background */
+    --bg-secondary: #ECEEF3; /* Softer Gray for Sections & Cards */
+    --bg-card: #FFFFFF; /* Pure White - Card Containers */
+    --bg-overlay: rgba(0, 0, 0, 0.5); /* Black Transparent - Overlays & Modals */
+
+    /* Footer */
+    --bg-footer: #f1f3f5;
+    --text-footer: #343a40;
+    --link-footer: #495057;
+    --hover-link-footer: #212529;
+    --border-footer: #dee2e6;
+    --bg-cta: #007bff;
+    --bg-hover-cta: #0056b3;
+
+    /* CTA */
+    --bg-cta: #007bff;
+    --text-cta: #FFFFFF;
+
+    /* ===== TEXT COLORS ===== */
+    --text-primary: #2F3A55; /* Slightly Darker Blue for Readability */
+    --text-secondary: #4A4A6A; /* Muted Blue - Subheadings */
+    --text-muted: #6A6F83; /* More Readable Grayish Blue for Labels & Hints */
+    --text-link: var(--primary-color); /* Deep Blue - Links */
+    --text-hover: var(--primary-dark); /* Navy Blue - Link Hover */
+    --text-inverted: #E4E6EB; /* Off-White - Text on Dark Backgrounds */
+
+    /* Tag Colors */
+    --tag-bg: #e0e7ff;
+
+    /* ===== BORDER & DIVIDERS ===== */
+    --border-color: #C8CDD5; /* Slightly Darker Gray - Default Borders */
+    --divider-color: #B0B0B0; /* Softer Silver Gray - Section Dividers */
+    --outline-border-color: var(--text-primary);
+
+    /* review these colors later  */
+    --primary-border-color: #4E5560; /* Lighter gray-blue */
+    --secondary-border-color: #6D7887; /* High Contrast | For interactive elements */
+    --tertiary-border-color: #3A3A3A; /* Warm Dark | Neutral gray alternative */
+
+    /* ===== BUTTON COLORS ===== */
+    --button-bg: var(--primary-color); /* Deep Blue - Default Button Background */
+    --button-bg-alt1: #007bff; 
+    --button-text: #FFFFFF; /* Pure White - Button Text */
+    --button-text-hover-alt2: #FFFFFF;
+    --button-hover-bg: #00408F; /* Deeper Navy - Button Hover */
+    --button-hover-bg-alt1: #0056b3;
+    --button-hover-bg-alt2: #000; 
+    --button-disabled-bg: #8A9BA8; /* Muted Blue-Gray - Disabled Button */
+
+    /* ===== Icon COLORS ===== */
+    --icon-primary-color: #424242; /* Dark Gray | Neutral, high contrast against white/light backgrounds */
+    --icon-hover-color: #1a73e8; /* Google Blue | Friendly accent color for clickable arrows.*/
+    --icon-hover-color-alt1: #d32f2f; /* Soft Red | For attention-grabbing actions (e.g., "go back") */
+    --icon-disabled-hover-color: #9e9e9e; /* Light Gray | Clearly inactive but still visible */
+
+    /* ===== ALERT COLORS ===== */
+    --error-color: #E63946; /* Slightly Muted Red - Errors & Alerts */
+    --warning-color: #E69500; /* Darker Golden Yellow - Warnings */
+    --success-color: #2BAF5D; /* Vibrant Green - Success Messages */
+    --info-color: #3992DC; /* Sky Blue - Informational Highlights */
+
+    /* ====== NAVIGATION: LIGHT THEME NAVBAR COLORS ====== */
+
+    /* Solid Background Colors (No Transparency, No Shadow) */
+    --nav-bg-solid: #f8f9fa; /* Default */
+    --nav-bg-solid-alt1: #ECEEF3;
+    --nav-bg-solid-alt2: #E3E6EC;
+    --nav-bg-solid-alt3: #F2F3F5;
+
+    /* Subtle Frosted Background Colors (Soft Transparency, Light Blur, Light Shadow) */
+    --nav-bg-subtle: rgba(255, 255, 255, 0.85);
+    --nav-blur-subtle: blur(8px);
+    --nav-shadow-subtle: 0px 1px 6px rgba(0, 0, 0, 0.08);
+
+    /* Glass Frosted Background Colors (More Transparent, Stronger Blur, More Depth Shadow) */
+    --nav-bg-glass: rgba(255, 255, 255, 0.65);
+    --nav-blur-glass: blur(12px);
+    --nav-shadow-glass: 0px 2px 10px rgba(0, 0, 0, 0.12);
+
+    /* Fully Transparent Background Colors (No Background, No Blur, No Shadow) */
+    --nav-bg-transparent: rgba(255, 255, 255, 0);
+    --nav-blur-transparent: blur(0px);
+    --nav-shadow-transparent: none;
+
+    --nav-border: rgba(0, 0, 0, 0.15); /* Darker Transparent Black Navbar Borders */
+    --nav-item-bg: transparent; /* Default Background for Nav Items */
+    --nav-item-text: #343A40; /* Dark Gray - Navbar Item Text */
+    --nav-item-hover-bg: #C8CDD5; /* Softer Gray for Hover Background */
+    --nav-item-hover-border: rgba(0, 0, 0, 0.2); /* Subtle Border on Hover */
+    --nav-item-hover-text: #1E2329; /* Dark Charcoal - Navbar Hover Text */
+    --nav-blur: blur(10px);
+    --nav-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Subtle Navbar Shadow */
+
+    /* ===== MOBILE NAVIGATION ===== */
+    --mob-nav-icon-border: #6C757D;
+    --mob-nav-icon-bg: #f8f9fa;
+    --mob-nav-icon-hover-border: #495057;
+    --mob-nav-icon-hover-bg: #E9ECEF;
+    --mob-nav-list-bg: #ffffff;
+    --mob-nav-list-border: #dee2e6;
+    --mob-nav-list-item-bg: #f8f9fa;
+    --mob-nav-list-item-hover-bg: #e9ecef;
+    --mob-nav-list-text: #343a40;
+    --mob-nav-list-text-hover: #212529;
+
+    /* ===== CODE BLOCK COLORS ===== */
+    --code-bg: #292C33; /* Slightly Lighter Dark Gray - Code Block Background */
+    --code-text: #F8F8F2; /* Off-White - Code Text */
+    --code-border: #515A70; /* Dark Blue-Gray - Code Block Border */
+    --code-keyword: #FF79C6; /* Pink - Keywords */
+    --code-string: #F1FA8C; /* Yellow - Strings */
+    --code-comment: #76839C; /* More Readable Blue - Comments */
+
+    /* ===== PROGRESS BAR ===== */
+    --progress-bar: #50C878;
+}
+
+/* ========== Dark Theme (Sleek & Premium) ========== */
+
+[data-theme="dark"] {
+    /* ===== PRIMARY COLORS ===== */
+    --primary-color: #4A90E2; /* Soft Blue - Main Brand Color */
+    --primary-dark: #357ABD; /* Darker Blue - Primary Elements */
+    --primary-light: #5AA2F2; /* Lighter Blue - Hover Effects */
+    --secondary-color: #3BA37E; /* Teal Green - Secondary Accent */
+    --tertiary-color: #E67E22; /* Warm Orange - Call to Action */
+    --quaternary-color: #9B59B6; /* Vibrant Purple - Highlights */
+    --accent-color: #D4A017; /* Golden Yellow - Important Elements */
+    --neutral-color: #A0A6AD; /* Muted Gray - Borders & Muted Text */
+
+    /* ===== BACKGROUND COLORS ===== */
+    --bg-main: #181A1B; /* Soft Black - Main Background */
+    --bg-secondary: #222629; /* Dark Gray - Sections & Cards */
+    --bg-card: #1F2326; /* Slightly Lighter Gray - Cards */
+    --bg-overlay: rgba(255, 255, 255, 0.08); /* Soft White Overlay */
+
+
+    /* Footer */
+    --bg-footer: #121314;
+    --text-footer: #ced4da;
+    --link-footer: #adb5bd;
+    --hover-link-footer: #ffffff;
+    --border-footer: #343a40;
+    --bg-cta: #0d6efd;
+    --bg-hover-cta: #1a73e8;
+
+    /* CTA */
+    --bg-cta: #007bff;
+    --text-cta: #FFFFFF;
+
+    /* ===== TEXT COLORS ===== */
+    --text-primary: #E4E6EB; /* Off-White - Main Text */
+    --text-secondary: #B0B3B8; /* Muted Gray - Subheadings */
+    --text-muted: #92959C; /* Soft Gray - Labels & Hints */
+    --text-link: var(--primary-color); /* Soft Blue - Links */
+    --text-hover: var(--primary-light); /* Lighter Blue - Link Hover */
+    --text-inverted: #181A1B; /* Dark - Text on Light Backgrounds */
+
+    /* Tag Colors */
+    --tag-bg: #1e2a4a;
+
+    
+    /* ===== BORDER & DIVIDERS ===== */
+    --border-color: #393E46; /* Subtle Dark Gray - Borders */
+    --divider-color: #2E3338; /* Softer Gray - Section Dividers */
+    --outline-border-color: var(--text-primary);
+
+    /* review these colors later  */
+    --primary-border-color: #E0E0E0;
+    --secondary-border-color: #BDBDBD;
+    --tertiary-border-color: #757575;
+
+    /* ===== BUTTON COLORS ===== */
+    --button-bg: var(--primary-color); /* Soft Blue - Button Background */
+    --button-bg-alt1: #1e88e5;
+    --button-text: #FFFFFF; /* Pure White - Button Text */
+    --button-text-hover-alt2: #000;
+    --button-hover-bg: var(--primary-dark); /* Darker Blue - Button Hover */
+    --button-hover-bg-alt1: #1565c0;
+    --button-hover-bg-alt2: #fff;
+    --button-disabled-bg: #4E555D; /* Muted Gray - Disabled Button */
+
+    /* ===== Icon COLORS ===== */
+    --icon-primary-color: #e0e0e0; /* Light Gray | Soft but visible against dark surfaces */
+    --icon-hover-color: #8ab4f8; /* Light Blue | Gentle glow effect for interactivity */
+    --icon-hover-color-alt1: #f28b82; /* Coral Pink | Warm accent for actions */
+    --icon-disabled-hover-color: #5f6368; /* Medium Gray | Lowers visibility without disappearing */
+
+    /* ===== ALERT COLORS ===== */
+    --error-color: #D9534F; /* Muted Red - Errors & Alerts */
+    --warning-color: #E6A100; /* Warm Amber - Warnings */
+    --success-color: #3BAF5C; /* Fresh Green - Success Messages */
+    --info-color: #5A9FE8; /* Lighter Blue - Informational Highlights */
+
+    /* ===== NAVIGATION COLORS ===== */
+
+    /* Solid (No Transparency, No Shadow) */
+    --nav-bg-solid: #181A1B;
+    --nav-bg-solid-alt1: #1D1F21;
+    --nav-bg-solid-alt2: #222426;
+    --nav-bg-solid-alt3: #2A2C2E;
+
+    /* Subtle Frosted (Soft Transparency, Light Blur, Light Shadow) */
+    --nav-bg-subtle: rgba(24, 26, 27, 0.85);
+    --nav-blur-subtle: blur(8px);
+    --nav-shadow-subtle: 0px 1px 6px rgba(0, 0, 0, 0.16);
+
+    /* Glass Frosted (More Transparent, Stronger Blur, More Depth Shadow) */
+    --nav-bg-glass: rgba(24, 26, 27, 0.65);
+    --nav-blur-glass: blur(12px);
+    --nav-shadow-glass: 0px 2px 10px rgba(0, 0, 0, 0.2);
+
+    /* Fully Transparent (No Background, No Blur, No Shadow) */
+    --nav-bg-transparent: rgba(24, 26, 27, 0);
+    --nav-blur-transparent: blur(0px);
+    --nav-shadow-transparent: none;
+
+    --nav-border: rgba(255, 255, 255, 0.15); /* Subtle White Border */
+    --nav-item-bg: transparent; /* Default Background for Nav Items */
+    --nav-item-text: #E4E6EB; /* Off-White - Navbar Item Text */
+    --nav-item-hover-bg: #2E3338; /* Slightly Lighter Gray - Hover Background */
+    --nav-item-hover-border: rgba(255, 255, 255, 0.2); /* Subtle Border on Hover */
+    --nav-item-hover-text: #FFFFFF; /* Bright White - Navbar Hover Text */
+
+    /* ===== MOBILE NAVIGATION ===== */
+    --mob-nav-icon-border: #A0A6AD; 
+    --mob-nav-icon-bg: #181A1B; 
+    --mob-nav-icon-hover-border: #E4E6EB; 
+    --mob-nav-icon-hover-bg: #222629; 
+
+    --mob-nav-list-bg: #222629;
+    --mob-nav-list-border: #393E46;
+    --mob-nav-list-item-bg: #1F2326;
+    --mob-nav-list-item-hover-bg: #2E3338;
+    --mob-nav-list-text: #E4E6EB;
+    --mob-nav-list-text-hover: #FFFFFF;
+
+    /* ===== CODE BLOCK COLORS ===== */
+    --code-bg: #23272C; /* Dark Gray - Code Block Background */
+    --code-text: #E4E6EB; /* Off-White - Code Text */
+    --code-border: #515A70; /* Dark Blue-Gray - Code Block Border */
+    --code-keyword: #FF79C6; /* Pink - Keywords */
+    --code-string: #F1FA8C; /* Yellow - Strings */
+    --code-comment: #76839C; /* Readable Blue - Comments */
+
+    --progress-bar: #3BAF5C;
+
+    /* Icon Colors */
+    /* --moon-light-default-hover;  */
+    --moon-light-silver:  #DCDCDC; /* moonlight silver */
+    --moon-bright-silver: #E6E6E6; /* bright silver */
+    --moon-light-default: #D1D5DB;  /* Soft Light Gray, like moonlight */
+    --moon-light-default1: #D3D3D3; /* Moonlight Gray: A pale, soft gray that resembles the real moon */
+    --moon-light-alt1: #C0C0C0; /* Light Silver - A classic silver shade, slightly reflective */
+    --moon-light-alt2: #B0B0B0; /* Cool Gray - A neutral, soft gray without strong blue tones */
+    --moon-light-alt3: #8A8A8A; /* Gunmetal Gray - A slightly darker gray, giving a moonlit feel */
+    --moon-light-alt4: #A9A9A9; /* Steel Gray - A medium-dark gray, soft yet defined */
+
+    --moon-light-default-hover:  #F0F2F5; /* Bright Silver Glow */
+    --moon-light-default1-hover: #E5E7EB; /* Elegant Silver */
+    --moon-light-alt1-hover: #A0A3A8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* outline: 1px solid red; */
+}
+
+html {
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    overflow-y: auto; /* Enables scrolling */
+
+    /* Prevent text zoom on mobile */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    scrollbar-width: none; /* Firefox */
+}
+
+body {
+    /* Fonts */
+    font-size: var(--fs-desktop-body);
+    font-family: var(--font-primary);
+    font-weight: var(--fw-body);
+    letter-spacing: var(--ls-desktop-body);
+    line-height: var(--lh-desktop-body);
+
+    /* Colors */
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+/* Webkit Browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+h1 {
+    font-size: var(--fs-desktop-h1);
+    font-weight: var(--fw-desktop-h1);
+}
+
+h2 {
+    font-size: var(--fs-desktop-h2);
+    font-weight: var(--fw-desktop-h2);
+}
+
+h3 {
+    font-size: var(--fs-desktop-h3);
+    font-weight: var(--fw-desktop-h3);
+}
+
+h4 {
+    font-size: var(--fs-desktop-h4);
+    font-weight: var(--fw-desktop-h4);
+}
+
+/* --------------- Header Navigation Starts -------------------- */
+.header-wrapper{
+    width: min(70vw, 1200px);
+    min-height: 4.125rem;
+    /* In media queries, allow the height to adjust dynamically. */
+    margin: 3rem auto;
+    /* margin: 1rem auto; for small screens via media queries. */
+    z-index: 10;
+    /* use border radius when there is boxy navbar */
+    /* border-radius: .2rem; */
+}
+
+/*------- sticky header Start-----*/
+#sticky-header.sticky {
+    position: fixed;
+    top: 0;
+    width: min(70vw, 1200px);
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    will-change: transform;
+    opacity: 1;
+    height: var(--sticky-header-height);
+}
+
+/* Hide the header when scrolling down */
+#sticky-header.hidden {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Prevent layout shift dynamically */
+body.sticky-header-active {
+    /* padding-top: var(--sticky-header-height, 0); */
+    padding-top: var(--total-header-space, 0);
+}
+
+/*------- sticky header end-----*/
+
+/* Header: Navigation */
+.nav-wrapper {
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--nav-border);
+
+    /* Solid Background Color (No Transparency, No Shadow) */
+    background-color: var(--nav-bg-solid);
+    /* background-color: var(--nav-bg-solid-alt1); */
+    /* background-color: var(--nav-bg-solid-alt2); */
+    /* background-color: var(--nav-bg-solid-alt3); */
+
+    /* Subtle Frosted Background Color (Soft Transparency, Light Blur, Light Shadow) */
+    /* background-color: var(--nav-bg-solid-alt3); */
+    /* -webkit-backdrop-filter: var(--nav-blur-subtle); */
+    /* backdrop-filter: var(--nav-blur-subtle); */
+    /* box-shadow: var(--nav-shadow-subtle); */
+
+    /* Glass Frosted Background Color (More Transparent, Stronger Blur, More Depth Shadow) */
+    /* background-color: var(--nav-bg-glass); */
+    /* -webkit-backdrop-filter: var(--nav-blur-glass); */
+    /* backdrop-filter: var(--nav-blur-glass); */
+    /* box-shadow: var(--nav-shadow-glass); */
+
+    /* Fully Transparent Background Color (No Background, No Blur, No Shadow) */
+    /* background-color: var(--nav-bg-transparent); */
+    /* -webkit-backdrop-filter: var(--nav-blur-transparent); */
+    /* backdrop-filter: var(--nav-blur-transparent); */
+    /* box-shadow: var(--nav-shadow-transparent); */
+
+    /* must use blur() for Subtle Frosted, Glass Frosted, Full Transparent BG Color */
+}
+
+.nav-wrapper .nav-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    /* justify-content: center; on small screens via media queries. */
+    align-items: center;
+    flex-wrap: wrap;
+    /* use gap while making it responsive */
+    /* gap: 1rem; */
+    list-style: none;
+    padding: 0;
+    margin: auto 0;
+}
+
+.nav-list li {
+    min-width: auto;
+    width: auto;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-list li .display-ul-list {
+    opacity: 1;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    padding: 0 10px;
+    font-size: var(--fs-nav-desktop); /* 24px */
+    font-weight: var(--fw-nav); /* 600 */
+    font-family: var(--font-secondary); /* 'Playfair Display', serif */
+    letter-spacing: var(--ls-desktop-nav); /* 1.1px */
+    cursor: pointer;
+    padding: var(--pad-nl-top-bottom) var(--pad-nl-left-right); /* 0.5rem | 1rem */
+    white-space: nowrap; /* Prevents text from breaking into a new line */
+    text-overflow: clip;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list li a:focus-visible {
+    outline: 1px solid var(--outline-border-color);
+    outline-offset: 1px;
+}
+
+.nav-list li a:hover{
+    color: var(--text-hover);
+}
+
+.nav-list li a:active {
+    transform: scale(0.95);
+}
+
+/* ------  Theme Toggle Button start -------- */
+
+.nav-list li button {
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text from breaking into a new line */
+    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+}
+
+/* on pressing tab  */
+.nav-list li button:focus-visible {
+    outline: 1px solid var(--outline-border-color);
+    outline-offset: 1px;
+}
+
+
+.nav-list li button .theme-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Avoid unnecessary stretching */
+    overflow: hidden; /* Prevents unwanted spacing */
+}
+
+.nav-list li button .theme-icon-wrapper svg {
+    width: 2rem; 
+    height: 2rem;
+    display: block;
+    position: absolute; 
+}
+
+/* Default Light Mode: Show Sun */
+.sun {
+    stroke-linecap: round; 
+    stroke-linejoin: round;
+    opacity: 1;
+    stroke: var(--sun-light-default);
+    stroke-width: 1px;
+    fill: var(--sun-light-default);
+}
+
+.nav-list li button:hover .sun {
+    fill: var(--sun-light-default-hover);
+    stroke: var(--sun-light-default-hover);
+    stroke-width: 0.9px;
+    stroke-linecap: round; 
+    stroke-linejoin: round;
+}
+
+.nav-list li button:active .sun {
+    fill: var(--sun-light-default-hover);
+    stroke: var(--sun-light-default-hover);
+    stroke-width: .9px;
+    transform: scale(1.1);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Default Light Mode: Hide Moon */
+.moon {
+    opacity: 0;
+}
+
+/* When Dark Mode is Active */
+[data-theme="dark"] .sun {
+    opacity: 0;
+}
+
+[data-theme="dark"] .moon {
+    opacity: 1;
+    stroke: var(--moon-light-alt1);
+    stroke-width: 1.5px;
+    stroke-linecap: round; /* Makes endpoints smooth */
+    stroke-linejoin: round; /* Makes corners smooth */
+    fill: var(--moon-light-alt1);
+}
+
+button:hover .moon path {
+    stroke-width: 1.5px;
+    stroke:  var(--moon-bright-silver);
+    fill:  var(--moon-bright-silver);
+    stroke-linecap: round; 
+    stroke-linejoin: round;
+}
+
+button:active .moon {
+    transform: scale(1.1);
+    stroke-width: 1.5px;
+    stroke:  var(--moon-bright-silver);
+    fill:  var(--moon-bright-silver);
+    stroke-linecap: round; 
+    stroke-linejoin: round;
+}
+
+.progress-wrapper {
+    width: 100%;
+    /* max-width: 100%; */
+    height: 0.125rem;
+    z-index: 1000;
+    background-color: var(--bg-main);
+    opacity: 1;
+    overflow: hidden;
+}
+
+.progress-wrapper .progress-meter {
+    height: 100%;
+    /* max-height: 100%; */
+    width: 100%;
+    background-color: var(--progress-bar);
+    transform-origin: left;
+    transform: scaleX(0);       /* Prevent flicker */
+    opacity: 0; /* Hidden until ready */
+    transition:
+        transform 0.3s ease-out,
+        opacity 0.2s ease-in;
+}
+
+
+/* ===== Animate Greeting & Profession Heading starts here ====== */
+
+#typingContainer {
+    width: 100%;
+    max-width: 60vw;
+    height: 15rem;
+    /* margin: 0 auto; */
+    text-align: center;
+    line-height: var(--lh-desktop-body);
+    font-size: var(--fs-quote-desktop); /* 22px */
+    font-family: var(--font-quote); /* Cormorant Garamond', serif */
+    font-weight: var(--fw-highlight); /* 500 */
+    /* letter-spacing: 0.5px added using js */
+    color: var(--text-primary);
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Ensure text wraps correctly */
+    word-break: break-word; /* Break long words if necessary */
+    white-space: normal; /* Prevent long words from causing overflow */
+    padding: 0 10px; /* Add padding to avoid touching screen edges */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 14rem auto 2rem; /* top left-right bottom*/
+
+    /* Add background image */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-image: url("../images/light-satin-soft-blue-abstract-creative-background-design_851755-201477.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.cursor {
+    height: 1.5rem;
+    /* height: 2rem; */
+    display: inline-block;
+    width: 3px;
+    background-color: var(--text-primary);
+    margin-left: 3px;
+    font-weight: var(--font-weight-bold);
+    /* Push the cursor slightly below the text */
+    vertical-align: -7px;  /* Moves it down */
+    transform: scaleY(1.2);  /* Slightly stretches it */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Animate Greeting & Profession Heading ends here */
+
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+section h2 {
+    color: #007bff;
+    color: var(--text-primary);
+}
+section ul {
+    list-style: none;
+    padding: 0;
+    /* border: 1px solid var(--border-color); */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line when needed */
+    gap: 10px; /* Adds spacing between items */
+}
+
+section ul li {
+    border: 1px solid var(--border-color);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    flex: 1 1 45%; /* By default, each list item takes up around 45% of the width */
+    box-sizing: border-box; /* Ensure padding and border don't exceed the width */
+}
+
+.skill-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.project, .blog-post {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.view-more, .cta-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: #fff;
+    color: #374151;
+    color: var(--text-primary);
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.cta-section {
+    color: var(--text-cta);
+    color: #374151;
+    color: var(--text-primary);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.cta-button {
+    color: #007bff;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-footer);
+    color: var(--text-footer);
+    margin-top: 10rem;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+
+@media (prefers-reduced-motion){
+    * {
+        scroll-behavior: auto;
+    }
+}
+
+/* laptop */
+@media (max-width: 1024px) {
+    body {
+        font-size: var(--fs-laptop-body);
+        letter-spacing: var(--ls-laptop-body);
+        line-height: var(--lh-laptop-body);
+    }
+
+    h1 {
+        font-size: var(--fs-laptop-h1);
+    }
+
+    h2 {
+        font-size: var(--fs-laptop-h2);
+    }
+
+    h3 {
+        font-size: var(--fs-laptop-h3);
+    }
+
+    h4 {
+        font-size: var(--fs-laptop-h4);
+    }
+
+
+    .header-wrapper {
+        width: min(80vw, 1000px); /* Slightly larger view on tablets */
+        /* margin: 1.25rem auto;  */
+    }
+
+    #sticky-header.sticky {
+        width: min(80vw, 1000px);
+    }
+
+    .nav-list li a {
+        font-size: var(--fs-nav-laptop); /* 20px */
+        letter-spacing: var(--ls-laptop-nav); /* 1px */
+        padding: var(--pad-nl-ms-top-bottom) var(--pad-nl-ms-left-right); /* 0.5rem 8px | 0.75rem 12px */
+    }
+
+    #typingContainer {
+        font-size: var(--fs-quote-laptop);
+        line-height: var(--lh-laptop-body);
+    }
+
+    .cursor {
+        height: 1.4rem;
+        display: inline-block;
+    }
+
+    section {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    section ul li {
+        flex: 1 1 45%; /* Items take up 45% width, but wrap when needed */
+    }
+
+    .cta-section {
+        padding: 20px;
+    }
+
+    .project, .blog-post {
+        padding: 12px;
+    }
+
+    .view-more, .cta-button {
+        padding: 8px 12px;
+    }
+    
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    body {
+        font-size: var(--fs-tablet-body);
+        letter-spacing: var(--ls-tablet-body);
+        line-height: var(--lh-tablet-body);
+    }
+
+    h1 {
+        font-size: var(--fs-tablet-h1);
+    }
+
+    h2 {
+        font-size: var(--fs-tablet-h2);
+    }
+
+    h3 {
+        font-size: var(--fs-tablet-h3);
+    }
+
+    h4 {
+        font-size: var(--fs-tablet-h4);
+    }
+
+    .header-wrapper {
+        width: 95vw; /* Almost full width on smaller tablets */
+        /* margin: 1rem auto;  */
+    }
+
+    #sticky-header.sticky {
+        width: 95vw;
+    }
+
+    .nav-list li a {
+        font-size: var(--fs-nav-tablet); /* 18px */
+        letter-spacing: var(--ls-tablet-nav); /* 0.8px */
+        padding: var(--pad-nl-ipad-top-bottom) var(--pad-nl-ipad-left-right); /* 8px | 0.5rem | 0.5rem */
+    }
+
+    #typingContainer {
+        font-size: var(--fs-quote-tablet);
+        line-height: var(--lh-tablet-body);
+    }
+
+    .cursor {
+        height: 1.3rem;
+        display: inline-block;
+        width: 2.5px;
+    }
+
+    section {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    section ul li {
+        flex: 1 1 100%; /* Items take up full width */
+    }
+
+    .cta-section {
+        padding: 15px;
+    }
+
+    .project, .blog-post {
+        padding: 10px;
+    }
+
+    .view-more, .cta-button {
+        padding: 6px 10px;
+    }
+}
+
+/* mobile large */
+@media (max-width: 480px) {
+    body {
+        font-size: var(--fs-mobile-lg-body);
+        letter-spacing: var(--ls-mobile-lg-body);
+        line-height: var(--lh-mobile-lg-body);
+    }
+
+    h1 {
+        font-size: var(--fs-mobile-lg-h1);
+    }
+
+    h2 {
+        font-size: var(--fs-mobile-lg-h2);
+    }
+
+    h3 {
+        font-size: var(--fs-mobile-lg-h3);
+    }
+
+    h4 {
+        font-size: var(--fs-mobile-lg-h4);
+    }
+
+    .header-wrapper {
+        width: 100%; /* Full width on mobile */
+        min-height: 3.125rem;
+        border-radius: 0;
+        /* margin: 0.5rem auto;  */
+    }
+
+    #sticky-header.sticky {
+        width: 100%;
+    }
+
+    .nav-wrapper .nav-list {
+        justify-content: center;
+        gap: .25rem;
+        gap: .2rem;
+    }
+
+    .nav-list li {
+        padding: 0 2px;
+    }
+
+    .nav-list li a {
+        font-size: var(--fs-nav-mobile-lg-); /* 16px */
+        letter-spacing: var(--ls-mob-lg); /* 0.5px */
+        padding: var(--pad-nl-mob-lg-top-bottom) var(--pad-nl-mob-lg-left-right); /* 2px | 0.125rem 0.125rem  */
+        font-weight: var(--fw-nav-mob);  /* 500 */
+    }
+
+    .nav-list li button {
+        /* width: 2.5rem; */
+        width: 2.1rem;
+        /* height: 2.5rem; */
+        height: 2.1rem;
+    }
+
+    .nav-list li button .theme-icon-wrapper {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .nav-list li button .theme-icon-wrapper svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .progress-wrapper {
+        height: 0.125rem;
+    }
+
+    #typingContainer {
+        font-size: var(--fs-quote-mobile-lg);
+        font-weight: var(--fw-quote);
+        line-height: var(--lh-mobile-lg-body);
+    }
+
+    .cursor {
+        height: 1.2rem;
+        display: inline-block;
+        width: 2px;
+    }
+
+    section {
+        padding: 8px;
+        max-width: 90%;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    section ul li {
+        flex: 1 1 100%; /* Full width for each item in the list */
+    }
+
+    .cta-section {
+        padding: 10px;
+    }
+
+    .project, .blog-post {
+        padding: 8px;
+    }
+
+    .view-more, .cta-button {
+        padding: 5px 8px;
+    }
+}
+
+/* mobile small */
+@media (max-width: 320px) {
+    body {
+        font-size: var(--fs-mobile-sm-body);
+        letter-spacing: var(--ls-mobile-sm-body);
+        line-height: var(--lh-mobile-sm-body);
+    }
+
+    h1 {
+        font-size: var(--fs-mobile-sm-h1);
+    }
+
+    h2 {
+        font-size: var(--fs-mobile-sm-h2);
+    }
+
+    h3 {
+        font-size: var(--fs-mobile-sm-h3);
+    }
+
+    h4 {
+        font-size: var(--fs-mobile-sm-h4);
+    }
+
+    .header-wrapper {
+        width: 100%; /* Ensures no horizontal scrolling */
+        min-height: 3.125rem; /* Reduce height for very small screens */
+        /* margin: 0.5rem auto;  */
+        border-radius: 0;
+    }
+
+    #sticky-header.sticky {
+        width: 100%;
+    }
+
+    .nav-wrapper {
+        min-height: 3rem;
+    }
+
+    .nav-wrapper .nav-list {
+        justify-content: center;
+        gap: .125rem;
+    }
+
+    .nav-list li {
+        padding: 0 1px;
+    }
+
+    .nav-list li a {
+        font-size: var(--fs-nav-mobile-sm); /* 14px */
+        letter-spacing: var(--ls-mob-sm); /* 0.3px*/
+        padding: var(--pad-nl-mob-sm-top-bottom) var(--pad-nl-mob-sm-left-right); /* 4px | 0.25rem | 0.25rem  */
+        font-weight: var(--fw-nav-mob);  /* 500 */
+    }
+
+    .nav-list li button {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .nav-list li button .theme-icon-wrapper {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .nav-list li button .theme-icon-wrapper svg {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .progress-wrapper {
+        height: 0.125rem;
+    }
+
+    #typingContainer {
+        font-size: var(--fs-quote-mobile-sm);
+        font-weight: var(--fw-quote);
+        line-height: var(--lh-mobile-sm-body);
+    }
+
+    .cursor {
+        height: 1rem;
+        display: inline-block;
+        width: 1.5px;
+    }
+
+    section {
+        padding: 5px;
+        max-width: 95%;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+
+    section ul li {
+        flex: 1 1 100%; /* Full width for each item in the list */
+    }
+
+    .cta-section {
+        padding: 8px;
+    }
+
+    .project, .blog-post {
+        padding: 6px;
+    }
+
+    .view-more, .cta-button {
+        padding: 4px 6px;
+    }
+}
