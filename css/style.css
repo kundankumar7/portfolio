@@ -631,6 +631,7 @@ h4 {
     will-change: transform;
     opacity: 1;
     height: var(--sticky-header-height);
+    margin-top: 0;
 }
 
 /* Hide the header when scrolling down */
@@ -895,7 +896,10 @@ button:active .moon {
     padding: 0 10px; /* Add padding to avoid touching screen edges */
     box-sizing: border-box; /* Include padding in width calculation */
     /* margin: 14rem auto 2rem; */
-    margin: 7rem auto 2rem; /* top left-right bottom*/
+    /* margin: 7rem auto 2rem;  */
+    /* top left-right bottom*/
+    /* margin: calc(var(--total-header-space, 7rem) + 2rem) auto 2rem;  */
+    margin: 0 auto 2rem;
 
     /* Add background image */
     /* display: flex;

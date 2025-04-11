@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollThreshold = 50; // Minimum scroll before hiding
     const showThreshold = 10; // Scroll up distance to show header
     let initialMarginTop;
+    let totalHeaderSpaceCached = null;
 
     // Dynamically Calculate Header Height & Margins
     function updateHeaderHeight() {
@@ -107,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const headerHeight = parseFloat(computedStyle.height);
 
         const totalHeaderSpace = marginTop + marginBottom + headerHeight;
+        totalHeaderSpaceCached = totalHeaderSpace;
 
         // Store in CSS variable for use in padding calculations
         document.documentElement.style.setProperty("--sticky-header-height", `${headerHeight}px`);
@@ -117,10 +119,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Apply Padding Compensation Dynamically
     function applyPaddingCompensation() {
-        const computedPadding = getComputedStyle(document.documentElement).getPropertyValue("--total-header-space");
-        document.body.style.paddingTop = stickyHeader.classList.contains("sticky") ? computedPadding : "0px";
+        const paddingValue = stickyHeader.classList.contains("sticky") && totalHeaderSpaceCached
+            ? `${totalHeaderSpaceCached}px`
+            : "0px";
 
-        // console.log(`[APPLY] Body padding-top: ${computedPadding}`);
+        document.body.style.paddingTop = paddingValue;
+
+        // console.log(`[APPLY] Body padding-top: ${paddingValue}`);
     }
 
     // Handle Scroll Behavior
@@ -146,10 +151,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentScrollY >= headerDefaultMargin) {
             if (!stickyHeader.classList.contains("sticky")) {
                 // console.log(" [STICKY] Header reached top, activating sticky mode.");
-                stickyHeader.classList.add("sticky");
-                stickyHeader.style.marginTop = "0px";
                 document.body.classList.add("sticky-header-active");
                 applyPaddingCompensation(); // Update padding
+
+                // stickyHeader.classList.add("sticky");
+                // stickyHeader.style.marginTop = "0px";
+
+                requestAnimationFrame(() => {
+                    stickyHeader.classList.add("sticky");
+                    stickyHeader.style.marginTop = "0px";
+                });
             }
         } else {
 
@@ -182,21 +193,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (window.scrollY > headerDefaultMargin) {
             // console.log("[LOAD] Page loaded mid-scroll → Applying sticky header.");
+            document.body.classList.add("sticky-header-active");
+            applyPaddingCompensation();
             stickyHeader.classList.add("sticky");
             stickyHeader.style.marginTop = "0px";
-            document.body.classList.add("sticky-header-active");
         }
 
-        applyPaddingCompensation();
     }
+
+    handlePageLoad();
 
     // Event Listeners for handing flow of scrolling up and down the page
     window.addEventListener("scroll", handleScroll);
+
+    // Debounced resize listener
+    let resizeTimeout;
     window.addEventListener("resize", () => {
-        updateHeaderHeight();
-        applyPaddingCompensation();
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateHeaderHeight();
+            applyPaddingCompensation();
+        }, 150);
     });
-    handlePageLoad();
 
     // 2. Progress bar animation
     const progressBar = document.querySelector(".progress-meter");
@@ -220,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             progressBar.style.opacity = "1";
             updateProgressBar();
-        }, 100); // Slight delay to let the scroll settle
+        }, 250); // Slight delay to let the scroll settle
     }
 
     // === Delay initial update to avoid flicker ===
@@ -236,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             updateProgressBar();
             requestAnimationFrame(animateProgress);
         });
-    }, 50); // Let scroll position settle
+    }, 100); // Let scroll position settle
 
     // === Save scroll position on exit ===
     const saveScroll = () => {
@@ -442,6 +460,40 @@ function typeEffect() {
 }
 
 typeEffect();
+
+function applyTypingContainerOffset() {
+    const container = document.getElementById("typingContainer");
+    if (!container) return;
+
+    const computedHeaderSpace = getComputedStyle(document.documentElement).getPropertyValue('--total-header-space').trim();
+
+    // Convert rem to px if needed (safe default fallback to 7rem = 112px)
+    let pxValue;
+    if (computedHeaderSpace.endsWith("rem")) {
+        const remValue = parseFloat(computedHeaderSpace);
+        const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize); // Usually 16px
+        pxValue = remValue * rootFontSize;
+    } else if (computedHeaderSpace.endsWith("px")) {
+        pxValue = parseFloat(computedHeaderSpace);
+    } else {
+        pxValue = 112; // Fallback for unknown units
+    }
+
+    // Add 2rem space below header, as you had in your original margin
+    const extraSpace = 2 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    container.style.marginTop = `${pxValue + extraSpace}px`;
+    // container.style.marginTop = `330px`;
+}
+
+// Initial call
+applyTypingContainerOffset();
+
+// Update on resize in case header space changes (responsive)
+window.addEventListener("resize", applyTypingContainerOffset);
+
+// Optionally: update when your scroll-based sticky logic updates --total-header-space
+window.addEventListener("scroll", applyTypingContainerOffset);
+
 
 
 
